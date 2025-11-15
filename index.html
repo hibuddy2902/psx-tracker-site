@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSX Live Tracker</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; background: #fafafa; color: #333; }
+    h1 { color: #006d77; margin-bottom: 0.2rem; }
+    .muted { color: #666; margin-top: 0; }
+    table { border-collapse: collapse; width: 100%; max-width: 760px; margin-top: 20px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,.08); }
+    th, td { border: 1px solid #e6e6e6; padding: 10px; text-align: left; }
+    th { background: #006d77; color: #fff; }
+    .row { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 1000px; }
+    @media (min-width: 900px) { .row { grid-template-columns: 1fr 1fr; } }
+    .card { background: #fff; padding: 16px; box-shadow: 0 0 10px rgba(0,0,0,.08); }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>PSX Live Tracker</h1>
+  <p class="muted">Latest data from <code>psx_data.json</code>. Portfolio chart uses <code>portfolio_public.json</code> (weights only).</p>
+
+  <div class="row">
+    <div class="card">
+      <h3>Prices</h3>
+      <table id="stocks">
+        <thead><tr><th>Symbol</th><th>Price</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>Portfolio Weights</h3>
+      <canvas id="weightsChart" width="400" height="400"></canvas>
+      <p id="weightsNote" class="muted" style="display:none;">No public weights found.</p>
+    </div>
+  </div>
+
+  <script>
+    async function loadPrices() {
+      const r = await fetch('psx_data.json');
+      const data = await r.json();
+      const tbody = document.querySelector('#stocks tbody');
+      tbody.innerHTML = '';
+      for (const symbol of data.symbols) {
+        const price = data.data[symbol]?.price ?? 'N/A';
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${symbol}</td><td>${price}</td>`;
+        tbody.appendChild(tr);
+      }
+    }
+
+    async function loadWeights() {
+      try {
+        const r = await fetch('portfolio_public.json');
+        if (!r.ok) throw new Error('no public weights');
+        const items = await r.json();
+        if (!Array.isArray(items) || items.length === 0) throw new Error('empty');
+
+        const labels = items.map(x => x.symbol);
+        const values = items.map(x => x.weight_pct);
+
+        const ctx = document.getElementById('weightsChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'pie',
+          data: { labels, datasets: [{ data: values }] },
+          options: {
+            plugins: {
+              legend: { position: 'bottom' },
+              tooltip: { callbacks: { label: (c) => `${c.label}: ${c.parsed.toFixed(2)}%` } }
+            }
+          }
+        });
+      } catch {
+        document.getElementById('weightsChart').style.display = 'none';
+        document.getElementById('weightsNote').style.display = 'block';
+      }
+    }
+
+    loadPrices();
+    loadWeights();
+  </script>
+</body>
+</html>

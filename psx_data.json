@@ -1,0 +1,110 @@
+{
+  "as_of": "2025-11-15T20:32:45Z",
+  "source": "dps.psx.com.pk/company/{SYMBOL}",
+  "symbols": [
+    "AGP",
+    "BBFL",
+    "EFERT",
+    "GCIL",
+    "GLAXO",
+    "HALEON",
+    "HINO",
+    "HTL",
+    "HUBC",
+    "ICL",
+    "BFAGRO",
+    "MACTER",
+    "MARI",
+    "PAEL",
+    "SAZEW",
+    "FECTC",
+    "LUCK"
+  ],
+  "data": {
+    "AGP": {
+      "price": 187.84,
+      "name": "No record found",
+      "sector": null
+    },
+    "BBFL": {
+      "price": 48.09,
+      "name": "No record found",
+      "sector": null
+    },
+    "EFERT": {
+      "price": 215.46,
+      "name": "No record found",
+      "sector": null
+    },
+    "GCIL": {
+      "price": 31.23,
+      "name": "No record found",
+      "sector": null
+    },
+    "GLAXO": {
+      "price": 393.75,
+      "name": "No record found",
+      "sector": null
+    },
+    "HALEON": {
+      "price": 829.24,
+      "name": "No record found",
+      "sector": null
+    },
+    "HINO": {
+      "price": 508.77,
+      "name": "No record found",
+      "sector": null
+    },
+    "HTL": {
+      "price": 52.4,
+      "name": "No record found",
+      "sector": null
+    },
+    "HUBC": {
+      "price": 213.91,
+      "name": "No record found",
+      "sector": null
+    },
+    "ICL": {
+      "price": 144.58,
+      "name": "No record found",
+      "sector": null
+    },
+    "BFAGRO": {
+      "price": 38.5,
+      "name": "No record found",
+      "sector": null
+    },
+    "MACTER": {
+      "price": 352.07,
+      "name": "No record found",
+      "sector": null
+    },
+    "MARI": {
+      "price": 701.65,
+      "name": "No record found",
+      "sector": null
+    },
+    "PAEL": {
+      "price": 53.02,
+      "name": "No record found",
+      "sector": null
+    },
+    "SAZEW": {
+      "price": 1739.3,
+      "name": "No record found",
+      "sector": null
+    },
+    "FECTC": {
+      "price": 172.89,
+      "name": "No record found",
+      "sector": null
+    },
+    "LUCK": {
+      "price": 442.41,
+      "name": "No record found",
+      "sector": null
+    }
+  }
+}
