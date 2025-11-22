@@ -1,0 +1,110 @@
+{
+  "as_of": "2025-11-22T21:28:49Z",
+  "source": "dps.psx.com.pk/company/{SYMBOL}",
+  "symbols": [
+    "AGP",
+    "BBFL",
+    "EFERT",
+    "GCIL",
+    "GLAXO",
+    "HALEON",
+    "HINO",
+    "HTL",
+    "HUBC",
+    "ICL",
+    "BFAGRO",
+    "MACTER",
+    "MARI",
+    "PAEL",
+    "SAZEW",
+    "FECTC",
+    "LUCK"
+  ],
+  "data": {
+    "AGP": {
+      "price": 184.0,
+      "name": "No record found",
+      "sector": null
+    },
+    "BBFL": {
+      "price": 48.01,
+      "name": "No record found",
+      "sector": null
+    },
+    "EFERT": {
+      "price": 215.17,
+      "name": "No record found",
+      "sector": null
+    },
+    "GCIL": {
+      "price": 35.24,
+      "name": "No record found",
+      "sector": null
+    },
+    "GLAXO": {
+      "price": 389.53,
+      "name": "No record found",
+      "sector": null
+    },
+    "HALEON": {
+      "price": 823.19,
+      "name": "No record found",
+      "sector": null
+    },
+    "HINO": {
+      "price": 509.8,
+      "name": "No record found",
+      "sector": null
+    },
+    "HTL": {
+      "price": 52.37,
+      "name": "No record found",
+      "sector": null
+    },
+    "HUBC": {
+      "price": 215.93,
+      "name": "No record found",
+      "sector": null
+    },
+    "ICL": {
+      "price": 152.35,
+      "name": "No record found",
+      "sector": null
+    },
+    "BFAGRO": {
+      "price": 39.62,
+      "name": "No record found",
+      "sector": null
+    },
+    "MACTER": {
+      "price": 346.22,
+      "name": "No record found",
+      "sector": null
+    },
+    "MARI": {
+      "price": 708.88,
+      "name": "No record found",
+      "sector": null
+    },
+    "PAEL": {
+      "price": 51.97,
+      "name": "No record found",
+      "sector": null
+    },
+    "SAZEW": {
+      "price": 1700.02,
+      "name": "No record found",
+      "sector": null
+    },
+    "FECTC": {
+      "price": 158.19,
+      "name": "No record found",
+      "sector": null
+    },
+    "LUCK": {
+      "price": 428.42,
+      "name": "No record found",
+      "sector": null
+    }
+  }
+}
